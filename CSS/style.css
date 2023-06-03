@@ -53,7 +53,7 @@ nav ul a
 
 .hero 
 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://www.ilregnodelcollezionista.com/uploads/2/0/8/0/20802814/background-images/837985583.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.ilregnodelcollezionista.com/uploads/2/0/8/0/20802814/background-images/837985583.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -126,7 +126,35 @@ nav ul a
   animation: fadeIn 1s ease;
   list-style: none; /* Rimuove i punti dalla lista */
   overflow-x: auto; /* Aggiunge lo scroll orizzontale */
-  padding-bottom: 20px; /* Aggiunge spazio inferiore per visualizzare l'ultimo prodotto */
+  padding-bottom: 20px; /* Aggiunge spazio inferiore per visualizzare l'ultimo prodotto*/
+  border-left-color: rgba(255, 255, 255, 1);
+  border-left-width: 5px;
+  border-left-style: solid; 
+  border-right-color: rgba(255, 255, 255, 1);
+  border-right-width: 5px;
+  border-right-style: solid; 
+  border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.dark-mode .product-list
+{
+
+  white-space: nowrap; /* Impedisce il wrap dei prodotti su più righe */
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: fadeIn 1s ease;
+  list-style: none; /* Rimuove i punti dalla lista */
+  overflow-x: auto; /* Aggiunge lo scroll orizzontale */
+  padding-bottom: 20px; /* Aggiunge spazio inferiore per visualizzare l'ultimo prodotto*/
+  border-left-color: rgba(255, 255, 255, 0.6);
+  border-left-width: 5px;
+  border-left-style: solid; 
+  border-right-color: rgba(255, 255, 255, 0.6);
+  border-right-width: 5px;
+  border-right-style: solid; 
+  border-radius: 20px;
 }
 
 .product-list div
@@ -256,7 +284,11 @@ footer {
 
 .dark-mode .featured-products
 {
-  background-color: #414141;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(25, 22, 22); /* se il browser non supporta i gradienti*/
+  background-image: linear-gradient(rgb(82, 76, 76), rgb(15, 9, 9));
 }
 
 .dark-mode .products{
