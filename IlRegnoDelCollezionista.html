@@ -16,22 +16,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo"><a class="logo" href="./IlRegnoDelCollezionista.html">Il Regno Del Collezionista</a></div>
-      <ul>
-        <div class="mode-toggle">
-          <button id="darkModeToggle">
-            <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle" style="filter: invert(100%); width: 20px; height: 20px;">
-          </button>
+  <header class = "Header-Container">
+    <div class = "Header">
+        <div class = "Right-Section">
+            <div class = "Header-Logo-Container">
+                <img src = "Images/logo.png" class = "Header-Logo">
+            </div>
+
+            <div class = "Header-Title">
+                Il Regno Del Collezionista
+            </div>
         </div>
-        <!-- "https://cdn-icons-png.flaticon.com/128/4023/4023190.png" -->
-        <a href="./IlRegnoDelCollezionista.html">Home</a>
-        <a id="Monete" href="./prodotti.html">Monete</a>
-        <a id="Banconote" href="./Banconote.html">Banconote</a>
-        <a id="Contatti" href="./Contatti.html">Contatti</a>
-      </ul>
-    </nav>
+
+        <div class = "Middle-Section">
+            <img src = "Images/Icons/Search-Icon.svg" class = "Header-Search-Icon">
+            <input placeholder="Cerca" class = "Header-Search-Bar" id = "Header-Search-Bar">
+        </div>
+
+        <nav class = "Left-Section">
+            <div class="Mode-Toggle-Container">
+                <button id="darkModeToggle">
+                    <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle.svg" class = "Dark-Mode-Image">
+                </button>
+            </div>
+            <a href="./IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
+                Home
+            </a>
+            <a id="Monete" href="./Monete.html" class = "Header-Hidden-Link">
+                Monete
+            </a>
+            <a id="Banconote" href="./Banconote.html" class = "Header-Hidden-Link">
+                Banconote
+            </a>
+            <a id="Contatti" href="./Contatti.html" class = "Header-Hidden-Link">
+                Contatti
+            </a>
+        </nav>
+    </div>
+</header>
+  <div class = "Below-Header">
     <div class="hero">
       <h1>Benvenuto nel Regno Del Collezionista</h1>
       <p>Scopri la magia delle monete rare e uniche.</p>
@@ -41,7 +64,7 @@
         </button>
       </a>
     </div>
-  </header>
+  </div>
 
   <div class="scrollbar" id="scrollbar1">
   <section class="featured-products">
