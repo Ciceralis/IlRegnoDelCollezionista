@@ -33,7 +33,7 @@ function scrollToSection(event) {
 }
 
 // Ottenere il logo
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('.Header-Logo');
 
 // Aggiungere l'evento click al logo
 logo.addEventListener('click', reloadPage);
