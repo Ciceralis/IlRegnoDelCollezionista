@@ -1,6 +1,9 @@
 .Below-Header
 {
-    padding: 18px;
+    padding-left: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+    padding-top: 82px;
 }
 
 .Scopri-Di-Piu-Button 
@@ -71,6 +74,11 @@
 {
     height: 64px;
     background-color: rgb(17, 17, 17);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .Header
@@ -109,6 +117,12 @@
     margin-right: 35px;
     display: flex;
     align-items: center;
+}
+
+.Header-Search-Button
+{
+    background: none;
+    border: none;
 }
 
 .Header-Search-Bar
@@ -182,4 +196,27 @@
 .Dark-Mode-Image
 {
     filter: invert(100%); width: 20px; height: 20px;
+}
+
+.Cart-Container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.Cart-Icon
+{
+    width: 40px;
+    margin-left: 20px;
+}
+
+.Cart-Number
+{
+    position: absolute;
+    top: -3px;
+    left: 39px;
+    color: white;
 }
