@@ -28,3 +28,8 @@ function hideDescription()
     </a>
     `
 }
+
+document.getElementById('Search-Button').onclick = function() {
+    document.getElementById('Header-Search-Bar').focus();
+};
+
