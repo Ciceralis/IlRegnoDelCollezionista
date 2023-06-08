@@ -1,0 +1,53 @@
+.All-Products-Grid
+{
+    margin-left: 80px;
+    margin-right: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 10px;
+}
+
+.All-Main
+{
+    padding-top: 90px;
+}
+
+.All-Title
+{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.All-Product
+{
+    border-radius: 12px;
+    width: 308px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+}
+
+.All-Product img
+{
+    height: 308px;
+    width: 308px;
+    background-color: rgba(0, 0, 0, 0.3); /* Sfondo semitrasparente per testo */
+    padding: 5px;
+    color: #fff;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.All-Product:hover{
+  background-color: #484848;
+}
+
+.All-Product div 
+{
+    max-width: 308px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
