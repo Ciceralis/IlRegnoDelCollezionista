@@ -41,10 +41,11 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 8px;
+    column-gap: 120px;
     row-gap: 16px;
     padding: 40px;
     justify-content: space-between;
+    text-align: center;
 }
 
 
