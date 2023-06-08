@@ -1,87 +1,269 @@
-.products {
-    padding: 40px;
-    text-align: center;
-    background-color: rgb(34, 34, 34);
-    
-  }
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
 
-  
-.products h2 {
+footer
+{
+  margin-top: 30px; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo
+{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+body 
+{
+  background-color: #222;
+  color: #fff;
+}
+
+.hero 
+{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.ilregnodelcollezionista.com/uploads/2/0/8/0/20802814/background-images/837985583.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1s ease;
+  background-color: #222;
+}
+
+.hero div{
+  margin-top: 108px;
+}
+
+.hero h1 
+{
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease;
+}
+
+.hero p 
+{
+  font-size: 20px;
+  margin-bottom: 30px;
+  animation: slideUp 1s ease;
+}
+
+.btn 
+{
+  display: inline-block;
+  background-color: #e43f5a;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease;
+}
+
+.btn:hover 
+{
+  background-color: #c72e47;
+  animation: bounce 0.5s ease;
+}
+
+.featured-products 
+{
+  padding: 40px;
+  text-align: center;
+  overflow-x: auto;
+  background-color: #222;
+}
+
+.featured-products h2 
+{
   font-size: 24px;
   margin-bottom: 20px;
   animation: slideUp 1s ease;
 }
 
-.categories li {
-  margin-bottom: 10px;
-  list-style-type: none;
+.product-list 
+{
+  white-space: nowrap; /* Impedisce il wrap dei prodotti su più righe */
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: fadeIn 1s ease;
+  list-style: none; /* Rimuove i punti dalla lista */
+  overflow-x: auto; /* Aggiunge lo scroll orizzontale */
+  padding-bottom: 20px; /* Aggiunge spazio inferiore per visualizzare l'ultimo prodotto*/
+  border-left-color: rgba(255, 255, 255, 0.6);
+  border-left-width: 5px;
+  border-left-style: solid; 
+  border-right-color: rgba(255, 255, 255, 0.6);
+  border-right-width: 5px;
+  border-right-style: solid; 
+  border-radius: 20px;
 }
 
-.categories li h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
+.product-list div
+{
+  align-items: flex-end;
+}
+
+.product {
+  border-radius: 12px;
+  height: 312px;
+  width: 308px;
   cursor: pointer;
-  border-radius: 8px;
-  transition: 0.5s;
 }
 
-.categories li h3:hover{
+.product:hover{
   background-color: #484848;
 }
 
-.subcategories {
-  display: none;
-  list-style: none;
+.product img {
+  height: 308px;
+  width: 308px;
+  background-color: rgba(0, 0, 0, 0.3); /* Sfondo semitrasparente per testo */
+  padding: 5px;
+  color: #fff;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.subcategories li {
-  font-size: 14px;
-  margin-bottom: 3px;
-  cursor: pointer;
+.product-list .product div {
+  max-width: 308px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.subcategories li:hover{
-  background-color: #484848;
-}
-
-.slide {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-}
-
-.slide img {
+@media (max-width: 768px) {
+  .product img{
+  height: 200px;
   width: auto;
-  height: 350px;
+  background-color: rgba(0, 0, 0, 0.3); /* Sfondo semitrasparente per testo */
+  padding: 5px;
+  color: #fff;
+  border-radius: 12px;
+  }
 }
 
-.fade {
-  animation: fade 5s linear infinite;
+.product-list::-webkit-scrollbar {
+  height: 8px; /* Altezza della scrollbar */
+  background-color: transparent; /* Colore di sfondo della scrollbar */
 }
 
-@keyframes fade {
-  0% { opacity: 0; }
-  5% {opacity: 0.1;}
-  10% {opacity: 0.2;}
-  15% {opacity: 0.3;}
-  20% { opacity: 0.4;}
-  25% {opacity: 0.5;}
-  30% { opacity: 0.6; }
-  35% {opacity: 0.7;}
-  40% {opacity: 0.8;}
-  45% {opacity: 0.9;}
-  50% { opacity: 1;}
-  55% {opacity: 0.9;}
-  60% { opacity: 0.8; }
-  65% { opacity: 0.7; }
-  70% { opacity: 0.6; }
-  75% { opacity: 0.5; }
-  80% { opacity: 0.4; }
-  85% {opacity: 0.3;}
-  90% { opacity: 0.2;}
-  95% { opacity: 0.1; }
-  100% { opacity: 0; }
+.product-list::-webkit-scrollbar-thumb {
+  background-color: #888; /* Colore del pollice (parte mobile) della scrollbar */
+  border-radius: 7px; /* Raggio dei bordi del pollice */
 }
+
+.product-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Colore del pollice durante l'hover */
+  border-radius: 7px;
+}
+
+.product-list::-webkit-scrollbar-track {
+  background-color: transparent; /* Colore della traccia (parte fissa) della scrollbar */
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.assistance{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.assistance img{
+  height: 308px;
+  width: auto;
+  padding: 5px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.help{
+  padding: 40px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.help h1{
+  font-size: 30px;
+}
+
+.dark-mode{
+  filter: invert(100%);
+  background-color: #d7d7d7;
+}
+
+.dark-mode .featured-products
+{
+  background-color: rgb(25, 22, 22); /* se il browser non supporta i gradienti*/
+  background-image: linear-gradient(rgb(82, 76, 76), rgb(15, 9, 9));
+}
+
+.featured-products
+{
+  background-color: rgb(25, 22, 22); /* se il browser non supporta i gradienti*/
+  background-image: linear-gradient(rgb(56, 52, 52), rgb(32, 31, 31));
+}
+
+.dark-mode .products{
+  background-color: #414141;
+}
+
+.dark-mode img
+{
+  filter: invert(100%);
+}
+
+.dark-mode .hero
+{
+  filter: invert(100%);
+}
+
+.dark-mode .product:hover{
+  background-color: #484848;
+}
+
+.dark-mode .slide{
+  filter: invert(100%);
+  margin-top: 26px;
+}
+
+.dark-mode .contact-info
+{
+  background-color: #282828;
+}
+  
+.dark-mode .about-us
+{
+  background-color: #282828;
+}  
+
+.dark-mode .Cart-Icon{
+  filter: invert(100%);
+}
+
+
