@@ -11,25 +11,28 @@
   <link rel="stylesheet" type="text/css" href="./CSS/style.css">
   <link rel="stylesheet" href = "./CSS/Header.css">
   <link rel= "stylesheet" href = "./CSS/Products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class = "Header-Container">
+  <header id="Header">
     <div class = "Header">
         <div class = "Right-Section">
             <div class = "Header-Logo-Container">
                 <img src = "Images/logo.png" class = "Header-Logo">
             </div>
 
-            <div class = "Header-Title">
+            <a href="./IlRegnoDelCollezionista.html"  class = "Header-Title">
                 Il Regno Del Collezionista
-            </div>
+            </a>
         </div>
 
         <div class = "Middle-Section">
           <button id = "Search-Button" class = "Header-Search-Button">
             <img src = "Images/Icons/Search-Icon.svg" class = "Header-Search-Icon">
           </button>
-            <input placeholder="Cerca" class = "Header-Search-Bar" id = "Header-Search-Bar">
+            <input placeholder="Cerca per Nome" class = "Header-Search-Bar" id = "Header-Search-Bar">
         </div>
 
         <nav class = "Left-Section">
@@ -52,7 +55,7 @@
             </a>
 
             <a id = "Carrello" href = "./Carrello.html" class = "Cart-Container">
-              <img src = "Images/Icons/Cart.png" class = "Cart-Icon">
+              <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
               <div class = "Cart-Number">
                 0
               </div>
@@ -214,6 +217,8 @@
   <footer>
     <p>&copy; 2023 Il Regno Del Collezionista. Tutti i diritti riservati.</p>
   </footer>
+
+  <script src="JS/Data_All.js"></script>
   <script src="./JS/script.js"></script>
   <script src="./JS/Header.js"></script>
   <script src="./JS/Data_Banconote.js"></script>
