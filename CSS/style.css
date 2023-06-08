@@ -3,7 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
+}
+
+footer
+{
+  margin-top: 30px; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .logo
@@ -35,7 +44,7 @@ body
 }
 
 .hero div{
-  margin-top: 70px;
+  margin-top: 108px;
 }
 
 .hero h1 
@@ -87,27 +96,6 @@ body
 
 .product-list 
 {
-  white-space: nowrap; /* Impedisce il wrap dei prodotti su più righe */
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  animation: fadeIn 1s ease;
-  list-style: none; /* Rimuove i punti dalla lista */
-  overflow-x: auto; /* Aggiunge lo scroll orizzontale */
-  padding-bottom: 20px; /* Aggiunge spazio inferiore per visualizzare l'ultimo prodotto*/
-  border-left-color: rgba(255, 255, 255, 1);
-  border-left-width: 5px;
-  border-left-style: solid; 
-  border-right-color: rgba(255, 255, 255, 1);
-  border-right-width: 5px;
-  border-right-style: solid; 
-  border-radius: 20px;
-  border-radius: 20px; 
-}
-
-.dark-mode .product-list
-{
-
   white-space: nowrap; /* Impedisce il wrap dei prodotti su più righe */
   display: flex;
   align-items: center;
@@ -226,15 +214,19 @@ footer {
 
 .dark-mode{
   filter: invert(100%);
+  background-color: #d7d7d7;
 }
 
 .dark-mode .featured-products
 {
-  border-color: white;
-  border-width: 1px;
-  border-style: solid;
   background-color: rgb(25, 22, 22); /* se il browser non supporta i gradienti*/
   background-image: linear-gradient(rgb(82, 76, 76), rgb(15, 9, 9));
+}
+
+.featured-products
+{
+  background-color: rgb(25, 22, 22); /* se il browser non supporta i gradienti*/
+  background-image: linear-gradient(rgb(56, 52, 52), rgb(32, 31, 31));
 }
 
 .dark-mode .products{
@@ -245,6 +237,7 @@ footer {
 {
   filter: invert(100%);
 }
+
 .dark-mode .hero
 {
   filter: invert(100%);
@@ -256,20 +249,21 @@ footer {
 
 .dark-mode .slide{
   filter: invert(100%);
-  margin-top: 14px;
-}
-
-.dark-mode
-{
-    background-color: #d7d7d7;
+  margin-top: 26px;
 }
 
 .dark-mode .contact-info
 {
-    background-color: #282828;
+  background-color: #282828;
 }
   
 .dark-mode .about-us
 {
-    background-color: #282828;
+  background-color: #282828;
 }  
+
+.dark-mode .Cart-Icon{
+  filter: invert(100%);
+}
+
+
