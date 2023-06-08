@@ -33,3 +33,18 @@ document.getElementById('Search-Button').onclick = function() {
     document.getElementById('Header-Search-Bar').focus();
 };
 
+let isVisibleArray = [];
+const searchBar = document.getElementById("Header-Search-Bar");
+searchBar.addEventListener("change", (e) => {
+    const value = e.target.value.toLowerCase();
+    localStorage.removeItem('bool');
+    isVisibleArray = [];
+    allProducts.forEach(product => {
+        const isVisible = product.name.toLowerCase().includes(value);
+        isVisibleArray.push(isVisible);
+        localStorage.setItem('bool', JSON.stringify(isVisibleArray));
+    })
+    console.log(JSON.parse(localStorage.getItem('bool')));
+    window.location.href= "All_Products.html";
+});
+
