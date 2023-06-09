@@ -1,3 +1,5 @@
+// Scopri di più
+
 function showDescription()
 {
     let newHTML = '';
@@ -29,6 +31,7 @@ function hideDescription()
     `
 }
 
+// barra di ricerca
 document.getElementById('Search-Button').onclick = function() {
     document.getElementById('Header-Search-Bar').focus();
 };
@@ -44,7 +47,84 @@ searchBar.addEventListener("change", (e) => {
         isVisibleArray.push(isVisible);
         localStorage.setItem('bool', JSON.stringify(isVisibleArray));
     })
-    console.log(JSON.parse(localStorage.getItem('bool')));
+    searchBar.value = '';
     window.location.href= "All_Products.html";
+
 });
 
+// Responsive Header
+
+function compressHeader(size) 
+{
+    const normalLeftHeaderHTML = `
+    <div class="Mode-Toggle-Container">
+        <button id="darkModeToggle">
+            <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle.svg" class = "Dark-Mode-Image">
+        </button>
+    </div>
+
+    <a href="./IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
+        Home
+    </a>
+
+    <a id="Monete" href="./Monete.html" class = "Header-Hidden-Link">
+        Monete
+    </a>
+
+    <a id="Banconote" href="./Banconote.html" class = "Header-Hidden-Link">
+        Banconote
+    </a>
+
+    <a id="Contatti" href="./Contatti.html" class = "Header-Hidden-Link">
+        Contatti
+    </a>
+
+    <a id = "Carrello" href = "./Carrello.html" class = "Cart-Container">
+        <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
+        <div class = "Cart-Number">
+        0
+        </div>
+    </a>
+    `
+    const compressLeftHeaderHTML = `
+    <div class="Mode-Toggle-Container">
+        <button id="darkModeToggle">
+            <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle.svg" class = "Dark-Mode-Image">
+        </button>
+    </div>
+
+    <div class = "Hamburger-Menu-Icon-Container">
+        <img src = "Images/Icons/Hamburger-Menu.svg" class = "Hamburger-Menu-Icon" id = "Hamburger-Menu-Icon">
+    </div>
+    `
+
+    const compressRightHeaderHTML = `
+        <div class = "Header-Logo-Container">
+            <img src = "Images/logo.png" class = "Header-Logo">
+        </div>
+    `
+
+    const normalRightHeaderHTML = `
+    <div class = "Header-Logo-Container">
+        <img src = "Images/logo.png" class = "Header-Logo">
+    </div>
+
+    <a href="./IlRegnoDelCollezionista.html"  class = "Header-Title">
+        Il Regno Del Collezionista
+    </a>
+    `
+    if (size.matches) 
+    {
+        document.getElementById('Left-Section').innerHTML = compressLeftHeaderHTML;
+        document.getElementById('Right-Section').innerHTML = compressRightHeaderHTML;
+    }
+    else
+    {
+        document.getElementById('Left-Section').innerHTML = normalLeftHeaderHTML;
+        document.getElementById('Right-Section').innerHTML = normalRightHeaderHTML;
+    }
+}
+
+let size = window.matchMedia("(max-width: 1000px)");
+compressHeader(size);
+size.addListener(compressHeader);
