@@ -53,16 +53,19 @@ function toggleMode() {
   body.classList.toggle('dark-mode');
   let element = document.getElementById("dark/light");
   let cartel = document.getElementById("cart");
+  let hamburgerMenu = document.getElementById('Hamburger-Menu-Icon');
 
   // Aggiungere o rimuovere la classe "dark-mode" dal body
   if (body.classList.contains('dark-mode')) {
     // Modalità scura attivata
     localStorage.setItem('mode', 'dark'); // Salva lo stato della modalità nella cache del browser
+    hamburgerMenu.src="./Imges/Icons/Hamburger-Menu.svg";
     element.src="./Images/Icons/Dark-Mode-Toggle.png";
     cartel.src="./Images/Icons/Cart-Black.png";
   } else {
     // Modalità diurna attivata
     localStorage.setItem('mode', 'day'); // Salva lo stato della modalità nella cache del browser
+    hamburgerMenu.src="./Imges/Icons/Hamburger-Menu-Light.png";
     element.src="./Images/Icons/Light-Mode-Toggle.svg";
     cartel.src="./Images/Icons/Cart.png";
   }
