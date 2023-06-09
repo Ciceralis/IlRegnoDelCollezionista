@@ -106,6 +106,7 @@ header
 
 .Header-Title
 {
+    width: auto;
     color: white;
     margin-left: 15px;
     font-size: 18px;
@@ -222,4 +223,49 @@ header
     top: -3px;
     left: 39px;
     color: white;
+}
+
+.Hamburger-Menu-Icon
+{
+    width: 35px;
+    margin-left: 30px;
+}
+
+@media (max-width: 600px)
+{
+    .Header
+    {
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 64px;
+    }
+}
+
+@media (max-width: 530px)
+{
+    .Header
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 64px;
+    }
+}
+
+@media (max-width: 1156px)
+{
+    .Header-Title
+    {
+        width: auto;
+        color: white;
+        margin-left: 15px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+    }
 }
