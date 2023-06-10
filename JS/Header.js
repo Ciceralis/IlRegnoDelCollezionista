@@ -58,50 +58,46 @@ function compressHeader(size)
 {
     const normalLeftHeaderHTML = `
     <div class="Mode-Toggle-Container">
-        <button id="darkModeToggle">
+        <a id="darkModeToggle" href = "!Light-IlRegnoDelCollezionista.html">
             <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle.svg" class = "Dark-Mode-Image">
-        </button>
+        </a>
     </div>
-
-    <a href="./IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
+    <a href="IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
         Home
     </a>
-
-    <a id="Monete" href="./Monete.html" class = "Header-Hidden-Link">
+    <a id="Monete" href="Monete.html" class = "Header-Hidden-Link">
         Monete
     </a>
-
-    <a id="Banconote" href="./Banconote.html" class = "Header-Hidden-Link">
+    <a id="Banconote" href="Banconote.html" class = "Header-Hidden-Link">
         Banconote
     </a>
-
-    <a id="Contatti" href="./Contatti.html" class = "Header-Hidden-Link">
+    <a id="Contatti" href="Contatti.html" class = "Header-Hidden-Link">
         Contatti
     </a>
 
     <a id = "Carrello" href = "./Carrello.html" class = "Cart-Container">
-        <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
-        <div class = "Cart-Number">
+    <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
+    <div class = "Cart-Number">
         0
-        </div>
-    </a>
-    `
+    </div>
+    </a>`
+
     const compressLeftHeaderHTML = `
     <div class="Mode-Toggle-Container">
-        <button id="darkModeToggle">
+        <a id="darkModeToggle" href = "!Light-IlRegnoDelCollezionista.html">
             <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle.svg" class = "Dark-Mode-Image">
-        </button>
+        </a>
     </div>
 
     <div class = "Hamburger-Menu-Icon-Container">
-        <img src = "Images/Icons/Hamburger-Menu.svg" class = "Hamburger-Menu-Icon" id = "Hamburger-Menu-Icon">
+        <img src = "Images/Icons/Hamburger-Menu-Light.png" class = "Hamburger-Menu-Icon" id = "Hamburger-Menu-Icon">
     </div>
     `
 
     const compressRightHeaderHTML = `
-        <div class = "Header-Logo-Container">
-            <img src = "Images/logo.png" class = "Header-Logo">
-        </div>
+    <div class = "Header-Logo-Container">
+        <img src = "Images/logo.png" class = "Header-Logo">
+    </div>
     `
 
     const normalRightHeaderHTML = `
@@ -117,14 +113,19 @@ function compressHeader(size)
     {
         document.getElementById('Left-Section').innerHTML = compressLeftHeaderHTML;
         document.getElementById('Right-Section').innerHTML = compressRightHeaderHTML;
+        a++;
     }
     else
     {
         document.getElementById('Left-Section').innerHTML = normalLeftHeaderHTML;
         document.getElementById('Right-Section').innerHTML = normalRightHeaderHTML;
+        if(a%2===0){
+            location.reload();
+        }
     }
 }
 
 let size = window.matchMedia("(max-width: 1000px)");
+let a=1;
 compressHeader(size);
 size.addListener(compressHeader);
