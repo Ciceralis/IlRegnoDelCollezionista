@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Il Regno Del Collezionista</title>
+  <meta property="og:site_name" content="Il Regno Del Collezionista">
+  <meta property="og:title" content="Il Regno Del Collezionista">
+  <link rel="shortcut icon" href="./Images/logo.png">
+  <meta name="description" content="Vendita di oggetti da collezione, monete, banconote, francobolli, orologi, accessori e tanto altro ancora." />
+  <meta name="keywords" content="monete da collezionismo, vendita monete da collezione, acquisto monete da collezione, collezionismo numismatico, monete rare, monete antiche, monete commemorative, numismatica, monete italiane, monete straniere, monete in argento, monete in oro, monete euro, monete romane, monete greche, monete medievali, monete da investimento, valutazione monete da collezione, consulenza numismatica, vendita sicura di monete, spedizione gratuita monete da collezionismo, garanzia autenticità monete, assistenza clienti monete collezionismo, vendita monete Milano, monete da collezione Italia, monete italiane antiche, monete estere rare, monete, moneta, collezione, rare, banconote, preziosi, argento, oro, regno, repubblica, orologio, orologi, moda, antica, lusso, trend, occasioni, occasione, offerta, asta, aste, prezzo, basso, economico, migliore," />
+  <link rel="stylesheet" href = "CSS/style.css">
+  <link rel="stylesheet" href = "CSS/Header.css">
+  <link rel="stylesheet" href = "CSS/Contacts.css">
+  <link rel="stylesheet" href = "CSS/All_Products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="Header">
+    <div id="Head" class = "Header">
+        <div class = "Right-Section">
+            <div class = "Header-Logo-Container">
+                <img src = "Images/logo.png" class = "Header-Logo">
+            </div>
+
+            <a href="./IlRegnoDelCollezionista.html"  class = "Header-Title">
+              Il Regno Del Collezionista
+            </a>
+        </div>
+
+        <div class = "Middle-Section">
+          <button id = "Search-Button" class = "Header-Search-Button">
+            <img src = "Images/Icons/Search-Icon.svg" class = "Header-Search-Icon">
+          </button>
+            <input placeholder="Cerca per Nome" class = "Header-Search-Bar" id = "Header-Search-Bar">
+        </div>
+
+        <nav class = "Left-Section">
+            <div class="Mode-Toggle-Container">
+                <button id="darkModeToggle">
+                    <img id="dark/light" src= "Images/Icons/Light-Mode-Toggle.svg" class = "Dark-Mode-Image">
+                </button>
+            </div>
+            <a href="./IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
+                Home
+            </a>
+            <a id="Monete" href="./Monete.html" class = "Header-Hidden-Link">
+                Monete
+            </a>
+            <a id="Banconote" href="./Banconote.html" class = "Header-Hidden-Link">
+                Banconote
+            </a>
+            <a id="Contatti" href="./Contatti.html" class = "Header-Hidden-Link">
+                Contatti
+            </a>
+
+            <a id = "Carrello" href = "./Carrello.html" class = "Cart-Container">
+              <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
+              <div class = "Cart-Number">
+                0
+              </div>
+            </a>
+        </nav>
+    </div>
+  </header>
+
+    <main class = "All-Main">
+        <div class = "All-Title"> I Nostri Prodotti</div>
+        <div>
+            <div id = "All-Products-Grid" class = "All-Products-Grid">
+                <!-- JS/Data_All.js -->
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+      <p>&copy; 2023 Il Regno Del Collezionista. Tutti i diritti riservati.</p>
+    </footer>
+  <script src="JS/Data_All.js"></script>
+  <script src="JS/script.js"></script>
+  <script src="JS/Header.js"></script>
+</body>
+</html
