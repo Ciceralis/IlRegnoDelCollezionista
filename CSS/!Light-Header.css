@@ -1,0 +1,272 @@
+.Below-Header
+{
+    padding-left: 18px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+    padding-top: 82px;
+}
+
+.Scopri-Di-Piu-Button 
+{
+    display: inline-block;
+    background-color: #e43f5a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease;
+    border-style: solid;
+    border-color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.Scopri-Di-Piu-Button:hover 
+{
+    background-color: #c72e47;
+    animation: bounce 0.5s ease;
+}
+
+.Page-Description
+{
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+.par{
+    padding-bottom: 8px;
+}
+
+.Page-Description-Title
+{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+
+@media (max-width: 840px)
+{
+  .Page-Description
+  {
+    font-size: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-decoration: none;
+  }
+  .Page-Description-Title
+  {
+    font-size: 21px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-decoration: underline;
+  }
+}
+
+
+
+/* header */
+
+header
+{
+    height: 64px;
+    background-color: rgb(17, 17, 17);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.Header
+{
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 64px;
+}
+
+.Right-Section
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Header-Logo
+{
+    width: 40px;
+    cursor: pointer;
+}
+
+.Header-Title
+{
+    width: auto;
+    color: white;
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Middle-Section
+{
+    flex: 1;
+    margin-left: 35px;
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.Header-Search-Button
+{
+    background: none;
+    border: none;
+}
+
+.Header-Search-Bar
+{
+    flex: 1;
+    height: 39px;
+    color: black;
+    font-size: 20px;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-shadow: 0.001px 0.001px 5px white;
+    border-radius: 20px;
+    cursor: text;
+    margin-left: 10px;
+    color: white;
+    transition: transform 0.5s;
+    padding-left: 20px;
+}
+
+/*.Header-Search-Bar:focus
+{
+    transform: scale(1.03);
+}*/
+
+.Header-Search-Bar::placeholder
+{
+    font-weight: bold;
+}
+
+.Header-Search-Icon
+{
+    filter: invert(100%);
+    transform: scaleX(-1);
+    width: 40px;
+    cursor: pointer;
+}
+
+.Left-Section
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Header-Hidden-Link
+{
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.Header-Hidden-Link:hover
+{
+    text-decoration: underline;
+}
+
+.Mode-Toggle-Container 
+{
+    display: flex;
+    align-items: center;
+}
+  
+.Mode-Toggle-Container  button 
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.Dark-Mode-Image
+{
+    filter: invert(100%); width: 20px; height: 20px;
+}
+
+.Cart-Container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.Cart-Icon
+{
+    width: 40px;
+    margin-left: 20px;
+}
+
+.Cart-Number
+{
+    position: absolute;
+    top: -3px;
+    left: 39px;
+    color: white;
+}
+
+.Hamburger-Menu-Icon
+{
+    width: 35px;
+    filter: invert(100%);
+    margin-left: 30px;
+}
+
+@media (max-width: 600px)
+{
+    .Header
+    {
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 64px;
+    }
+}
+
+@media (max-width: 530px)
+{
+    .Header
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 64px;
+    }
+}
+
+@media (max-width: 1156px)
+{
+    .Header-Title
+    {
+        width: auto;
+        color: white;
+        margin-left: 15px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
