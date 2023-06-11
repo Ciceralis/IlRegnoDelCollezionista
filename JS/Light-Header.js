@@ -32,9 +32,11 @@ function hideDescription()
 }
 
 // barra di ricerca
-document.getElementById('Search-Button').onclick = function() {
-    document.getElementById('Header-Search-Bar').focus();
-};
+const searchButton = document.getElementById("Search-Button");
+searchButton.addEventListener('click', () => {
+    console.log('hello there');
+    document.getElementById("Header-Search-Bar").focus();
+})
 
 let isVisibleArray = [];
 const searchBar = document.getElementById("Header-Search-Bar");
@@ -57,41 +59,41 @@ searchBar.addEventListener("change", (e) => {
 function compressHeader(size) 
 {
     const normalLeftHeaderHTML = `
-    <div class="Mode-Toggle-Container">
-        <a id="darkModeToggle" href = "IlRegnoDelCollezionista.html">
-            <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.png" class = "Dark-Mode-Image">
-        </a>
-    </div>
-    <a href="!Light-IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
-        Home
-    </a>
-    <a id="Monete" href="!Light-Monete.html" class = "Header-Hidden-Link">
-        Monete
-    </a>
-    <a id="Banconote" href="!Light-Banconote.html" class = "Header-Hidden-Link">
-        Banconote
-    </a>
-    <a id="Contatti" href="!Light-Contatti.html" class = "Header-Hidden-Link">
-        Contatti
-    </a>
-
-    <a id = "Carrello" href = "./!Light-Carrello.html" class = "Cart-Container">
-        <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
-        <div class = "Cart-Number">
-        0
+        <div class="Mode-Toggle-Container">
+            <a id="darkModeToggle" href = "IlRegnoDelCollezionista.html">
+                <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.svg" class = "Dark-Mode-Image">
+            </a>
         </div>
-    </a>
+        <a href="!Light-IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
+            Home
+        </a>
+        <a id="Monete" href="!Light-Monete.html" class = "Header-Hidden-Link">
+            Monete
+        </a>
+        <a id="Banconote" href="!Light-Banconote.html" class = "Header-Hidden-Link">
+            Banconote
+        </a>
+        <a id="Contatti" href="!Light-Contatti.html" class = "Header-Hidden-Link">
+            Contatti
+        </a>
+
+        <a id = "Carrello" href = "./!Light-Carrello.html" class = "Cart-Container">
+            <img id="cart" src = "Images/Icons/Cart.png" class = "Cart-Icon">
+            <div class = "Cart-Number">
+            0
+            </div>
+        </a>
     `
     const compressLeftHeaderHTML = `
-    <div class="Mode-Toggle-Container">
-        <a id="darkModeToggle" href = "IlRegnoDelCollezionista.html">
-            <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.png" class = "Dark-Mode-Image">
-        </a>
-    </div>
+        <div class="Mode-Toggle-Container">
+            <a id="darkModeToggle" href = "IlRegnoDelCollezionista.html">
+                <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.svg" class = "Dark-Mode-Image">
+            </a>
+        </div>
 
-    <div class = "Hamburger-Menu-Icon-Container">
-        <img src = "Images/Icons/Hamburger-Menu.svg" class = "Hamburger-Menu-Icon" id = "Hamburger-Menu-Icon">
-    </div>
+        <div class = "Hamburger-Menu-Icon-Container">
+            <img src = "Images/Icons/Hamburger-Menu.svg" class = "Hamburger-Menu-Icon" id = "Hamburger-Menu-Icon">
+        </div>
     `
 
     const compressRightHeaderHTML = `
@@ -101,13 +103,13 @@ function compressHeader(size)
     `
 
     const normalRightHeaderHTML = `
-    <div class = "Header-Logo-Container">
-        <img src = "Images/logo.png" class = "Header-Logo">
-    </div>
+        <div class = "Header-Logo-Container">
+            <img src = "Images/logo.png" class = "Header-Logo">
+        </div>
 
-    <a href="./!Light-IlRegnoDelCollezionista.html"  class = "Header-Title">
-        Il Regno Del Collezionista
-    </a>
+        <a href="./!Light-IlRegnoDelCollezionista.html"  class = "Header-Title">
+            Il Regno Del Collezionista
+        </a>
     `
     if (size.matches) 
     {
@@ -131,28 +133,28 @@ compressHeader(size);
 size.addListener(compressHeader);
 
 document.getElementById("Header").innerHTML = `
-<div id="Head" class = "Header">
+    <div id="Head" class = "Header">
         <div class = "Right-Section" id = "Right-Section">
             <div class = "Header-Logo-Container">
                 <img src = "Images/logo.png" class = "Header-Logo">
             </div>
 
             <a href="!Light-IlRegnoDelCollezionista.html"  class = "Header-Title">
-              Il Regno Del Collezionista
+                Il Regno Del Collezionista
             </a>
         </div>
 
         <div class = "Middle-Section">
-          <button id = "Search-Button" class = "Header-Search-Button">
+            <button id = "Search-Button" class = "Header-Search-Button">
             <img src = "Images/Icons/Search-Icon.svg" class = "Header-Search-Icon">
-          </button>
+            </button>
             <input placeholder="Cerca per Nome" class = "Header-Search-Bar" id = "Header-Search-Bar">
         </div>
 
         <nav class = "Left-Section" id = "Left-Section">
             <div class="Mode-Toggle-Container">
                 <a id="darkModeToggle" href = "IlRegnoDelCollezionista.html">
-                    <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.png" class = "Dark-Mode-Image">
+                    <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.svg" class = "Dark-Mode-Image">
                 </a>
             </div>
             <a href="!Light-IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
@@ -169,10 +171,10 @@ document.getElementById("Header").innerHTML = `
             </a>
 
             <a id = "Carrello" href = "./!Light-Carrello.html" class = "Cart-Container">
-              <img id="cart" src = "Images/Icons/Cart-Black.png" class = "Cart-Icon">
-              <div class = "Cart-Number">
+                <img id="cart" src = "Images/Icons/Cart-Black.png" class = "Cart-Icon">
+                <div class = "Cart-Number">
                 0
-              </div>
+                </div>
             </a>
         </nav>
     </div>
