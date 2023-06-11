@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Il Regno Del Collezionista - Prodotti</title>
+  <meta property="og:site_name" content="Il Regno Del Collezionista">
+  <meta property="og:title" content="Il Regno Del Collezionista">
+  <link rel="shortcut icon" href="./Images/logo.png">
+  <meta name="description" content="Vendita di oggetti da collezione, monete, banconote, francobolli, orologi, accessori e tanto altro ancora." />
+  <meta name="keywords" content="monete da collezionismo, vendita monete da collezione, acquisto monete da collezione, collezionismo numismatico, monete rare, monete antiche, monete commemorative, numismatica, monete italiane, monete straniere, monete in argento, monete in oro, monete euro, monete romane, monete greche, monete medievali, monete da investimento, valutazione monete da collezione, consulenza numismatica, vendita sicura di monete, spedizione gratuita monete da collezionismo, garanzia autenticità monete, assistenza clienti monete collezionismo, vendita monete Milano, monete da collezione Italia, monete italiane antiche, monete estere rare, monete, moneta, collezione, rare, banconote, preziosi, argento, oro, regno, repubblica, orologio, orologi, moda, antica, lusso, trend, occasioni, occasione, offerta, asta, aste, prezzo, basso, economico, migliore," />
+  <link rel="stylesheet" type="text/css" href="./CSS/!Light-style.css">
+  <link rel="stylesheet" href = "./CSS/!Light-Header.css">
+  <link rel= "stylesheet" href = "./CSS/!Light-Products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <header id="Header">
+    <div class = "Header">
+        <div class = "Right-Section">
+            <div class = "Header-Logo-Container">
+                <img src = "Images/logo.png" class = "Header-Logo">
+            </div>
+
+            <a href="./!Light-IlRegnoDelCollezionista.html"  class = "Header-Title">
+                Il Regno Del Collezionista
+            </a>
+        </div>
+
+        <div class = "Middle-Section">
+          <button id = "Search-Button" class = "Header-Search-Button">
+            <img src = "Images/Icons/Search-Icon.svg" class = "Header-Search-Icon">
+          </button>
+            <input placeholder="Cerca per Nome" class = "Header-Search-Bar" id = "Header-Search-Bar">
+        </div>
+
+        <nav class = "Left-Section">
+            <div class="Mode-Toggle-Container">
+                <a id="darkModeToggle" href = "Banconote.html">
+                    <img id="dark/light" src= "Images/Icons/Dark-Mode-Toggle.png" class = "Dark-Mode-Image">
+                </a>
+            </div>
+            <a href="./!Light-IlRegnoDelCollezionista.html" class = "Header-Hidden-Link">
+                Home
+            </a>
+            <a id="Monete" href="./!Light-Monete.html" class = "Header-Hidden-Link">
+                Monete
+            </a>
+            <a id="Banconote" href="./!Light-Banconote.html" class = "Header-Hidden-Link">
+                Banconote
+            </a>
+            <a id="Contatti" href="./!Light-Contatti.html" class = "Header-Hidden-Link">
+                Contatti
+            </a>
+
+            <a id = "Carrello" href = "./!Light-Carrello.html" class = "Cart-Container">
+              <img id="cart" src = "Images/Icons/Cart-Black.png" class = "Cart-Icon">
+              <div class = "Cart-Number">
+                0
+              </div>
+            </a>
+        </nav>
+    </div>
+</header>
+  <div class = "Below-Header">
+    <div class="hero">
+      <div class="slide fade">
+        <img src=".\Images\Banconote\i1.jpeg" alt="Immagine 1">
+      </div>
+      <div class="slide fade">
+        <img src=".\Images\Banconote\i2.jpeg" alt="Immagine 2">
+      </div>
+      <div class="slide fade">
+        <img src=".\Images\Banconote\i3.jpeg" alt="Immagine 2">
+      </div>
+      <div class="slide fade">
+        <img src=".\Images\Banconote\i4.jpeg" alt="Immagine 2">
+      </div>
+      <div class="slide fade">
+        <img src=".\Images\Banconote\i6.jpeg" alt="Immagine 2">
+      </div>
+      <div class="slide fade">
+        <img src=".\Images\Banconote\i5.jpeg" alt="Immagine 2">
+      </div>
+    </div>
+  
+    <script>
+      let slides = document.querySelectorAll('.slide');
+      let index = 0;
+      
+      function showSlide() 
+      {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+        slides[index].style.display = 'block';
+        index = (index + 1) % slides.length;
+      }
+      
+      showSlide(); // Mostra la prima immagine
+      
+      setInterval(showSlide, 5000); // Cambia immagine ogni 5 secondi
+
+    </script>
+  </div>
+   
+<!---->
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Angola</h2>
+      <ul class="product-list" id = "Products-Banconote-Angola">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Congo</h2>
+      <ul class="product-list" id = "Products-Banconote-Congo">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Marocco</h2>
+      <ul class="product-list" id = "Products-Banconote-Marocco">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Bielorussia</h2>
+      <ul class="product-list" id = "Products-Banconote-Bielorussia">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Afghanistan</h2>
+      <ul class="product-list" id = "Products-Banconote-Afghanistan">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+  
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Cambogia</h2>
+      <ul class="product-list" id = "Products-Banconote-Cambogia">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Bahamas</h2>
+      <ul class="product-list" id = "Products-Banconote-Bahamas">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Cina</h2>
+      <ul class="product-list" id = "Products-Banconote-Cina">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Indonesia</h2>
+      <ul class="product-list" id = "Products-Banconote-Indonesia">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Mongolia</h2>
+      <ul class="product-list" id = "Products-Banconote-Mongolia">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Serbia</h2>
+      <ul class="product-list" id = "Products-Banconote-Serbia">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+
+  <div class="scrollbar" id="scrollbar1">
+    <section class="featured-products">
+      <h2>Banconote Giappone</h2>
+      <ul class="product-list" id = "Products-Banconote-Giappone">
+        <!-- JS/Data.js -->
+      </ul>
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2023 Il Regno Del Collezionista. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="JS/Data_All.js"></script>
+  <script src="./JS/script.js"></script>
+  <script src="./JS/!Light-Header.js"></script>
+  <script src="./JS/Data_Banconote.js"></script>
+  <script>
+    // Aggiunta di eventi click alle categorie per mostrare/nascondere le opzioni
+    document.addEventListener('DOMContentLoaded', function() {
+      const categories = document.querySelectorAll('.categories li');
+      categories.forEach(category => {
+        category.addEventListener('click', function() {
+          const subcategories = this.querySelector('.subcategories');
+          subcategories.style.display = subcategories.style.display === 'none' ? 'block' : 'none';
+          if (subcategories.style.display=== 'block') {
+            // Scorri verso il basso solo se la categoria viene aperta
+            const subcategories = this.querySelector('.subcategories');
+            subcategories.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+    
+  </script>
+</body>
+</html>
